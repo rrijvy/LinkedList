@@ -167,5 +167,21 @@ namespace LinkedList
 
             return array;
         }
+
+        public void Reverse()
+        {
+            var current = first;
+            var second = first.next;
+            while (second != null)
+            {                
+                var third = second.next;                
+                second.next = current;
+                current = second;
+                second = third;
+            }
+            last = first;
+            last.next = null;
+            first = current;
+        }
     }
 }

@@ -14,5 +14,6 @@ namespace LinkedList
         bool Contains(T value);
         int IndexOf(T value);
         T[] ToArray();
+        void Reverse();
     }
 }
