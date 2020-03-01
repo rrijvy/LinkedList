@@ -62,7 +62,7 @@ namespace LinkedList
             }
         }
 
-        public int DeleteFirst(T value)
+        public int DeleteFirst()
         {
             if (first == null)
                 return -1;
@@ -78,7 +78,7 @@ namespace LinkedList
             }
         }
 
-        public int DeleteLast(T value)
+        public int DeleteLast()
         {
             if (first == null)
                 return -1;
@@ -148,13 +148,13 @@ namespace LinkedList
             }
         }
 
-        public T[] ToArray(T value)
+        public T[] ToArray()
         {
             T[] array = new T[size];
 
             var current = first;
 
-            var index = 0;
+            int index = 0;
 
             while (current != null)
             {
