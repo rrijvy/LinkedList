@@ -15,5 +15,6 @@ namespace LinkedList
         int IndexOf(T value);
         T[] ToArray();
         void Reverse();
+        void SkipFirst(int index);
     }
 }

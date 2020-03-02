@@ -24,7 +24,9 @@ namespace ConsoleApp
             person.AddLast(person5);
             person.AddLast(person6);
 
-            person.Reverse();
+            person.SkipFirst(2);
+
+            //person.Reverse();
 
             Person[] people = person.ToArray();
 
@@ -33,13 +35,13 @@ namespace ConsoleApp
                 Console.WriteLine(people[i].Name);
             }
 
-            Console.WriteLine(person.Contains(person1));
+            //Console.WriteLine(person.Contains(person1));
 
-            Console.WriteLine(person.IndexOf(person1));
+            //Console.WriteLine(person.IndexOf(person1));
 
-            person.DeleteFirst();
+            //person.DeleteFirst();
 
-            Console.WriteLine(person.Contains(person1));
+            //Console.WriteLine(person.Contains(person1));
         }
     }
 

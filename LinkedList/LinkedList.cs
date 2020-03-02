@@ -173,8 +173,8 @@ namespace LinkedList
             var current = first;
             var second = first.next;
             while (second != null)
-            {                
-                var third = second.next;                
+            {
+                var third = second.next;
                 second.next = current;
                 current = second;
                 second = third;
@@ -182,6 +182,26 @@ namespace LinkedList
             last = first;
             last.next = null;
             first = current;
+        }
+
+        public void SkipFirst(int toIndex)
+        {
+            int index = 0;
+            var current = first;
+            while (current != null)
+            {
+                if ((toIndex - 1) == index)
+                {
+                    var prev = current;
+                    first = current.next;
+                    prev.next = null;
+                    size--;
+                    return;
+                }
+                index++;
+                size--;
+                current = current.next;
+            }
         }
     }
 }
